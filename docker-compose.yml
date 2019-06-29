@@ -8,6 +8,7 @@ networks:
 services:
     code-server:
         image: codercom/code-server:latest
+        restart: on-failure
         command:
             - --allow-http
             - --password=${PASSWORD}
